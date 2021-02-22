@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>学生登录界面</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/log_sign.css">
+  </head>
+  <body>
+      <div class="container ">
+          <div class="row ">
+            <div class="col-lg-6 col-xs-6">
+            </div>
+             <div class="col-lg-6 col-xs-6 log-sign-bar">
+            <p class="pull-right"> 
+                <span class="hidden-xs no-id">没有账号吗？</span>
+                <span class="sign_up_stu"><a href="stu_sign_in.html">注册</a></span>
+            </p>
+            </div>
+          </div>
+            <div class="row row-center model2">
+                <div class="col-md-6 col-lg-12">
+                    <div class="log_in_heading">
+                        <h3 class="text-center">用户登录</h3>
+                        <p class="text-center">学生</p>
+                        <span class="errorMsg" style="color:red;"></span>
+                    </div>
+            <form>
+                <div class="form-group">
+                  <label for="Stu_Id">学生帐号</label>
+                  <input type="text" class="form-control" id="Stu_Id" placeholder="学生帐号">
+                </div>
+                <div class="form-group">
+                    <label for="Stu_Password">登录密码</label>
+                    <input type="password" class="form-control" id="Stu_Password" placeholder="登录密码">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember Me ?</label>
+                 </div>
+                <button type="submit" class="btn btn-success" >登录</button>
+              </form>
+              <div class="exchange_business text-right">
+                  <a href="business_log_in.html">切换成商家账号登录</a>
+              </div>
+                </div>
+            </div>
+        </div>
+
+  
+   
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+
+
+                     //调用登录接口
+              $("[type='submit']").click(function() {
+                  var userid = document.getElementById("Stu_Id").value;
+                  if(null == userid || ""==userid){
+                      alert("请输入学生账号");
+                      return ;
+          }
+          var password =document.getElementById("Stu_Password").value;
+            if(null == password || "" == password) {
+              alert("请输入密码");
+              return;
+            }
+            $.ajax({
+                url:'http://127.0.0.1:8000/jquery-server',
+                data:{ "Stu_Id": userid, "Stu_Password":password},
+                type:'post',
+                dataType:'json',
+                success : function(result) {          //请求成功的回调函数
+                //传得到这一步 ，具体就是后端相关了
+                    //   alert("hahah");
+                    //将json字符串转换为js对象
+                  let data = JSON.parse(result);
+                  if (data.code === 0){
+                    alert("成功");
+                    window.location.href = "success";//"success"是跳转的页面？
+                }//     window.location.href = "index";
+            },
+                    error : function(e) {           //请求失败的回调函数
+                      console.log(e);
+            }
+            });
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+
+.left-content{
+    background: lightgray;
+    padding: 0;
+    top:55px;
+    position: fixed;
+    bottom: 0;
+    width:200px;
+    height:680px;
+    font-size: 17px;
+    line-height: 180%;
+ }   
+.left-content li{
+    text-align: center;
+}
+.right-content{
+    margin-top:55px;
+    float:right;
+    /* width:1020px; */
+    /* background-color:red; */
+    /* height:1000px; */
+}
+.vertical-bar a{
+        height:55px;
+}

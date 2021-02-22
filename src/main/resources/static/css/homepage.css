@@ -1,0 +1,485 @@
+     /* 注册登录按钮 */
+     .log-sign li a{
+        border-radius:10px;
+        letter-spacing: 2px;
+        font-size: 17px;
+        color:#fff;        
+        font: weight 30px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin: 2px;
+    }
+    /* 注册按钮 */
+    .log-sign li:nth-child(2) a{
+       
+        border-color: #04AA51;
+        background:#04AA51 ;
+
+    }
+    .log-sign li:nth-child(2) a:hover{
+       
+      background-color: #049b4a;
+      border-color: #049b4a;
+
+   }
+    /* 登录按钮 */
+    .log-sign li:first-child a{
+        border-color:rgba(184, 192, 186, 0.384);
+        background:rgba(184, 192, 186, 0.384);
+    }
+    .log-sign li:first-child a:hover{
+        border-color:rgba(158, 165, 160, 0.384);
+        background:rgba(158, 165, 160, 0.384);
+    }
+    #Service {
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    #Service .col-md-6 {
+        padding: 15px;
+        height:250px;
+    }
+    
+    #Service .col-md-6:hover {
+        padding: 15px;
+        background: #f1f1f1;
+        box-shadow: 1px 1px 3px #ccc;
+        border-radius: 10px;
+    }
+    #Service a {
+   color: #333;
+   text-decoration: none;
+    }
+
+    #Service img {
+        margin: auto;
+        width: 115px;      
+        height: 115px; 
+    }
+
+    #Service h3 {
+   font-weight: 700;
+}
+    .title-header{
+    line-height: 64px;
+    color: #353030;
+    text-align: center;
+   }
+   .tips{
+    font-size: 20px;
+    line-height: 26px;
+    color: #8c8889;
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+   .home-intro{
+        height:680px;
+   }
+   .home-content{
+     margin-top:150px;
+   }
+   .home-intro-2{
+     margin-top: 50px;
+     font-size: 20px;
+     line-height: 32px;
+   }
+   .home-active-2{
+    margin-top: 30px;
+     font-size: 20px;
+     line-height: 32px;
+   }
+   .home-intro-3{
+     margin-top: 50px;
+   }
+/* 活动日记 */
+section {
+	position: relative;
+}
+section.bg-grey {
+	background-color: #f9f9f9;
+}
+
+section.bg-reverse {
+	background-color: #000;
+}
+
+section.bg-overlay {
+	background-color: rgba(0,0,0,0.85);
+}
+
+section.padding {
+	padding: 100px 0;
+}
+section#blog {
+	padding-bottom: 70px;
+}
+
+section .section-title {
+	font-size: 34px;
+}
+
+section .section-lead {
+	font-size: 18px;
+	font-weight: 200;
+	margin-top: 15px;
+}
+
+section .section-body {
+	margin-top: 60px;
+}
+/*article*/
+article.card {
+	border: none;
+	box-shadow: 0 0 40px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,.05);
+	-ms-box-shadow: 0 0 40px rgba(0,0,0,.05);
+	-o-box-shadow: 0 0 40px rgba(0,0,0,.05);
+	margin-bottom: 60px;
+}
+
+article.card .card-img-top {
+	height: 100%;
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+article.card .card-title {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+article.card .card-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+article.card .card-title a:hover {
+	opacity: .8;
+}
+
+article.card .card-text {
+	color: #666;
+	line-height: 26px;
+}
+
+article.card .card-subtitle {
+	font-size: 14px;
+	color: #666;
+  margin-top: 10px;
+}
+
+article.card .card-subtitle a {
+	color: #666;
+	border-bottom: 1px dotted #666;
+	text-decoration: none;
+}
+
+article.card .card-more {
+	text-transform: uppercase;
+	font-weight: 800;
+	text-transform: 2px;
+	color: #000;
+	display: inline-block;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+article.card .card-more i {
+	margin-left: 5px;
+}
+/*section*/
+section {
+	position: relative;
+}
+
+section.bg-grey {
+	background-color: #f9f9f9;
+}
+
+section.bg-reverse {
+	background-color: #000;
+}
+
+section.bg-overlay {
+	background-color: rgba(0,0,0,0.85);
+}
+
+section.padding {
+	padding: 100px 0;
+}
+
+section#blog {
+	padding-bottom: 70px;
+}
+
+section .section-title{
+	font-size: 34px;
+}
+
+section .section-lead {
+	font-size: 18px;
+	font-weight: 200;
+	margin-top: 15px;
+}
+
+section .section-body {
+	margin-top: 60px;
+}
+
+section.callout {
+	padding: 50px 0;
+}
+
+section.callout .cta {
+	text-align: right;
+}
+
+section.callout .cta .btn {
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 2px;
+	border-radius: 0;
+	border-width: 2px;
+	border-color: #000;
+	color: #000;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+/* gallery section */
+#gallery {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#gallery .col-md-4 {
+  padding-top: 52px;
+}
+#gallery img {
+  width: 100%;
+  padding-bottom: 18px;
+}
+#gallery .col-md-4 div {
+  position: relative;
+  bottom: 18px;
+  padding-bottom: 12px;
+}
+#gallery h3 {
+  font-size: 18px;
+  line-height: 8px;
+}
+/* 角色介绍 */
+/* ================================
+    *SERVICE AREA CSS
+================================ */
+
+.service-area {
+  padding: 100px 0;
+}
+
+.service-content h2 {
+  font-size: 35px;
+  color: #1c1f28;
+  margin-bottom: 15px;
+}
+
+.service-content {
+  padding-bottom: 35px;
+}
+
+.single-service-item {
+  padding: 80px 55px 45px 55px;
+  border: 1px solid #707070;
+  border-radius: 50px;
+  transition: all .3s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
+.service-icon i:before {
+  font-size: 70px;
+  margin: 0;
+  color: #707070;
+  transition: all .3s;
+}
+
+.service-icon {
+  margin-bottom: 30px;
+}
+
+.single-service-item h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.single-service-item:hover {
+  border-color: #04AA51 ;
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.16);
+}
+
+.single-service-item:hover .service-icon i:before {
+  color:#04AA51 ;
+}
+
+/* 活动介绍 */
+/* About Section */
+#about {
+	padding: 110px 0;
+	background: #f6f6f6;
+}
+#about h3 {
+	font-size: 22px;
+	margin: 0 0 20px 0;
+}
+#about h2 {
+	position: relative;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+#about h2::after {
+	position: absolute;
+	content: "";
+	background-color: #04AA51 ;
+	height: 3px;
+	width: 50px;
+	bottom: -1px;
+	left: 0;
+}
+#about .about-text li {
+	margin-bottom: 6px;
+	margin-left: 6px;
+	list-style: none;
+	padding: 0;
+}
+#about .about-text li:before {
+	color: #1f386e;
+	font-size: 11px;
+	font-weight: 300;
+	padding-right: 8px;
+}
+#about img {
+	padding: 20px;
+	width: 500px;
+	margin-top: 10px;
+	background: #fff;
+	border-right: 0;
+	box-shadow: 0 0 50px rgba(0,0,0,0.06);
+}
+#about p {
+	line-height: 24px;
+	margin: 30px 0;
+}
+/* 留言部分 */
+.story-box{
+	padding: 70px 0px;
+}
+
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.main-timeline-box{
+	position: relative;
+	word-wrap: break-word;
+}
+
+.main-timeline-box .timeline-element {
+    margin-bottom: 50px;
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: -webkit-flex;
+    flex-direction: row;
+
+}
+.main-timeline-box .reverse {
+    flex-direction: row-reverse;
+   
+}
+.main-timeline-box .separline::before {
+    top: 20px;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 2px;
+    background-color: #f1f1f1;
+    left: calc(50% - 1px);
+    height: calc(100% + 4rem);
+}
+
+.main-timeline-box .iconBackground {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    display: inline-block;
+    background-color: #f1f1f1;
+    top: 20px;
+    margin-left: -10px;
+}
+.main-timeline-box .timeline-text-content {
+    padding: 30px 35px;
+	background: #f1f1f1;
+}
+.main-timeline-box .reverse .timeline-text-content{
+	margin-right: 30px;
+}
+.main-timeline-box .reverse .time-line-date-content p {
+    float: left;
+	padding: 30px 35px;
+	background: #f1f1f1;
+}
+.main-timeline-box .reverse .time-line-date-content {
+	margin-right: 30px;
+}
+
+.display-font{
+	font-family: 'Marck Script', cursive;
+	font-size: 25px;
+	color: #222222;
+}
+.main-timeline-box .timeline-text-content{
+	margin-left: 30px;
+}
+.main-timeline-box .time-line-date-content p {
+    float: right;
+	padding: 30px 35px;
+	background: #f1f1f1;
+}
+.main-timeline-box .time-line-date-content {
+	margin-right: 30px;
+}
+
+.main-timeline-box .time-line-date-content .mbr-timeline-date{
+	background: #fac1c4;
+	color: #ffffff;
+}
+.main-timeline-box .reverse .time-line-date-content .mbr-timeline-date{
+	background: #04AA51 ;
+	color: #ffffff;
+}
+.footer{
+	padding:50px 0px;
+	text-align:center;
+}
+.footer p{
+	color:#000;
+	font-size:14px;
+	line-height:25px;
+}
+
+/*-- //Footer --*/

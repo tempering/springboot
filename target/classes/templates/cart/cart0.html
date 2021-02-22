@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>购物车</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+            #head{
+            width: 65%;
+            margin: 70px auto;
+        }
+
+            #logo{
+            float: left;
+        }
+
+            #search{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+  <!--导航-->
+      <!--navbar-fixed-top固定在顶部-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+      <!--<div class="container-fluid">-->  
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" alt="">
+                我们毕业了
+            </a>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="homepage.html">首页 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#tab-active">活动</a></li>
+             
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服务 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#tab-photo">摄影</a></li>
+                  <li><a href="#tab-clothes">服装</a></li>
+                  <li><a href="#tab-souvenir">纪念品</a></li>
+                  <li><a href="#tab-restaurant">订餐</a></li>
+                  <li><a href="#">其他</a></li>
+                </ul>
+              </li> 
+              <li><a href="#">留言板</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="stu_log_in.html">登录</a></li>
+                <li><a href="../../static/stu_sign_in.html">注册</a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+<!--第一块，search模块-->
+    <div id="head">
+        <div id="logo">
+            <p>我们毕业了--购物车</p>
+        </div>
+        <div id="search">
+            <input type="text" value="自营">
+            <button type="button" class="btn btn-success">搜索</button>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+</html>

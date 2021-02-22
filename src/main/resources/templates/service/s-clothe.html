@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>服装类</title>
+
+    <!-- Bootstrap -->
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/first.css">
+        <link rel="stylesheet" href="../css/vertical-bar.css">
+        <link rel="stylesheet" href="../css/service.css">
+        <style>
+         .content-right{
+          margin-top:70px;
+          float:right;
+          height:1000px;
+         }
+        </style>
+  </head>
+ 
+  <body>
+     <!--导航-->
+      <!--navbar-fixed-top固定在顶部-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" alt="">
+                我们毕业了
+            </a>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li ><a href="../active/active.html">活动</a></li>
+              <li class="active"><a href="../service/service.html">服务</a></li> 
+              <li><a href="../message/message_board.html">留言板</a></li> 
+              <li><a href="#">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right head-name"> 
+                <li><a href="cart.html">购物车 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> </a></li>
+                <li><img src="../img/head.jpg" alt="" title="双击头像即可退出账号"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rain@ <span class="caret"></span>  
+                      <ul class="dropdown-menu">
+                        <li><a href="../head_info_down/my_active.html">我的活动</a></li>
+                        <li><a href="../head_info_down/publish_active.html">发布活动</a></li>
+                        <li><a href="../head_info_down/publish_plan.html">发布策划</a></li>
+                        <li><a href="../head_info_down/publish_commodity.html">发布商品</a></li>
+                        <li><a href="../head_info_down/my_record.html">我的日记</a></li>
+                        <li><a href="../head_info_down/my_order.html">我的订单</a></li>
+                        <li><a href="../head_info_down/stu_inform.html">学生信息</a></li>
+                        <li><a href="../head_info_down/bus_inform.html">学生信息</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../../static/index.html">退出登录</a></li>
+                      </ul>
+                  </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>    
+    <div class="container">
+    <div class="row"> 
+      <div class="col-md-12 col-xs-12 content-right">
+        <ol class="breadcrumb">
+            <li><a href="service.html">服务类</a></li>
+            <li class="active">服装类</li>
+        </ol>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+      <!--活动策划-->
+      <div class="container-fluid damu-three"> 
+      <!--产品-->
+      <div class="row service-item">
+            <div class="col-md-3 col-xs-12 text-center">
+                <div class="thumbnail">
+                    <img src="../img/souvenir.jpg" alt="...">
+                    <div class="caption">
+                      <h3>高校定制明信片</h3>
+                      <p class="price">￥5</p>
+                      <p class="evaluate"></p>
+                      <button class="btn btn-primary active" data-toggle="modal" data-target="#myModal">查看详情</button>
+                          <a href="#" class="btn btn-default  active" role="button">加入购物车</a></p>
+                    </div>
+                  </div>
+            </div>
+                <!-- 模态框（Modal） -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">高校定制明信片</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>商家姓名：</p>
+                                    <p>商家联系方式：</p>
+                                    <p>店铺名称：</p>
+                                    <p>店铺地址：</p>
+                                    <p>商品详情：</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal -->
+                    </div>
+            <!-- <div class="col-md-3 text-center">
+                <div class="thumbnail">
+                    <img src="../img/souvenir.jpg" alt="...">
+                    <div class="caption">
+                      <h3>高校定制明信片</h3>
+                      <p class="price">￥5</p>
+                      <p class="evaluate"></p>
+                      <p><a href="#" class="btn btn-primary active" role="button">查看详情</a> 
+                          <a href="#" class="btn btn-default  active" role="button">加入购物车</a></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="thumbnail">
+                    <img src="../img/souvenir.jpg" alt="...">
+                    <div class="caption">
+                      <h3>高校定制明信片</h3>
+                      <p class="price">￥5</p>
+                      <p class="evaluate"></p>
+                      <p><a href="#" class="btn btn-primary active" role="button">查看详情</a> 
+                          <a href="#" class="btn btn-default  active" role="button">加入购物车</a></p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="thumbnail">
+                    <img src="../img/souvenir.jpg" alt="...">
+                    <div class="caption">
+                      <h3>高校定制明信片</h3>
+                      <p class="price">￥5</p>
+                      <p class="evaluate"></p>
+                      <p><a href="#" class="btn btn-primary active" role="button">查看详情</a> 
+                          <a href="#" class="btn btn-default  active" role="button">加入购物车</a></p>
+                    </div>
+                  </div>
+            </div> -->
+      </div>
+      </div>
+      </div>
+
+      </div>
+      <!-- 分页 -->
+    </div> 
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>  
+    </body>
+    </html>

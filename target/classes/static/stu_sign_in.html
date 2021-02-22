@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>学生注册界面</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/log_sign.css">
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+      <div class="container ">
+          <div class="row ">
+            <div class="col-lg-6 col-xs-6">
+            </div>
+             <div class="col-lg-6 col-xs-6 log-sign-bar">
+            <p class="pull-right"> 
+                <span class="hidden-xs yes-id">已经有账号了？</span>
+                <span class="log_in_stu"><a href="stu_log_in.html">登录</a></span>
+            </p>
+            </div>
+          </div>
+            <div class="row row-center model2">
+                <div class="col-md-6 col-lg-12">
+                    <div class="log_in_heading">
+                        <h3 class="text-center">用户注册</h3>
+                        <p class="text-center">学生</p>
+                        <span class="errorMsg" style="color:red;"></span>
+                    </div>
+            <form>
+                <div class="form-group">
+                  <label for="Stu_Id">学生账号</label>
+                  <input type="text" class="form-control" id="Stu_Id" placeholder="学生账号">
+                </div>
+                <div class="form-group">
+                  <label for="Stu_Name">用户名</label>
+                  <input type="text" class="form-control" id="Stu_Name" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <label for="Stu_Password">输入密码</label>
+                    <input type="password" class="form-control" id="Stu_Password" placeholder="确认密码">
+                  </div>
+                  <div class="form-group">
+                    <label for="Stu_RePassword">确认密码</label>
+                    <input type="password" class="form-control" id="Stu_RePassword" placeholder="登录密码">
+                  </div>
+                <button type="submit" class="btn btn-success" id="sut_btn">注册</button>
+              </form>
+              <div class="exchange_business text-right">
+                  <a href="business_sign_in.html">切换成商家账号注册</a>
+              </div>
+                </div>
+            </div>
+        </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        //调用登录接口
+        $("[type='submit']").click(function(){
+                var stuid=$("Stu_Id").val();
+                if(null === stuid || ""=== stuid){
+                        alert("请输入学生账号");
+                        return false;
+                      }
+               //验证用户名：必须由字母、数字和下划线组成，并且长度为5到12位
+               //1 获取用户名输入框里的内容
+                var usernameText = $("#Stu_Name").val();
+               //2 创建正则表达式对象
+               var usernamePatt =/^\w{5,12}$/;
+               //3 使用test验证
+               if(!usernamePatt.test(usernameText)){
+                 //4 提示用户结果
+                   $("span.errorMsg").text("用户名不合法！必须由字母、数字或下划线组成，并且长度为5到12位");
+                   return false;
+               }
+               $("span.errorMsg").text("");
+              // //1 获取密码输入框里的内容
+               var passwordText = $("#Stu_Password").val();
+
+              if(null == passwordText || ""== passwordText){
+                        alert("请输入登录密码");
+                        return ;
+                      }
+
+              var repwdText=$("#Stu_RePassword").val();
+
+              if(null ==  repwdText || ""== repwdText){
+                        alert("请输入确认密码");
+                        return ;
+                      }
+              //2和密码相比较
+              if(repwdText != passwordText)
+              //3提示用户
+              $("span.errorMsg").text("确认密码和输入密码不一致！");
+                  return false;
+              //合法
+              $("span.errorMsg").text("");
+
+            $.ajax({
+                url:'http://localhost:8080/stu_log_in.html',
+                data:{ "Stu_Id": stuid, "Stu_Name": usernamePatt,"Stu_Password":passwordText},
+                type:'post',
+                dataType:'json',
+                success : function(result) {          //请求成功的回调函数
+                //传得到这一步 ，具体就是后端相关了
+                    //   alert("hahah");
+                    //将json字符串转换为js对象
+                  let data = JSON.parse(result);
+                  if (data.code === 0){
+                    alert("成功");
+                    window.location.href = "success";//"success"是跳转的页面？
+                }//     window.location.href = "index";
+            },
+                error : function(e) {           //请求失败的回调函数
+                     console.log(e);
+            }
+            });
+
+          })
+    </script>
+  </body>
+</html>

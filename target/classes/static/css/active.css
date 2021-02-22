@@ -1,0 +1,122 @@
+/* 我的活动部分 */
+.content-left{
+ font-size: 17px;
+}
+.active-content{
+   margin-top:70px;
+}
+/* 活动策划下 */
+#act-plan{
+  margin-top: 20px;
+}
+/* 活动记录下 */
+#act-record{
+  margin-top: 30px;
+}
+.more{
+  position: relative;
+  left:150px;
+  bottom:30px;
+  font-size:15px;
+}
+/* 我的活动 */
+.title-line{
+     border-bottom: 1px solid #e8e8e8;
+     margin-bottom: 30px;
+}
+.title-line h3{
+  font-size: 18px;
+  line-height: 1;
+  position: relative;
+  bottom: -13;
+  background: #fff;
+  display: inline;
+}
+img{
+  display: block;
+  /* 最大宽度不能超过母元素的100% */
+  max-width: 100%;
+  border-radius: 3px;
+  }
+  .act-list-item .title{
+    display:block;
+    color:#444;
+    font-size: 15px;
+    margin-bottom: 15px;
+    /* 行高 */
+    line-height: 5px;
+  }
+ 
+  .tab-down-one,.tab-down-two
+  {
+    margin-top: 20px;
+  }
+  .act-list-item .info{
+    color:#888;
+    font-size: 8px;
+  } 
+  .record-list-item .title{
+    display:block;
+    color:#444;
+    font-size: 18px;
+    margin-bottom: 15px;
+    /* 行高 */
+    line-height: 5px;
+  }
+  .record-list-item .info{
+    color:#888
+  }
+  .avatar{
+    display:inline-block;
+
+  }
+  .avatar img{
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .record-list-item{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #eee;
+  }
+   .act-list-item{
+    margin:2px;
+    padding-bottom: 15px;
+  } 
+  .act-list-item .title:hover{
+    color:#337ab7;
+  }
+  .nav-tabs button{
+       margin-left: 750px;
+  }
+  .record-list-item:first-child{
+    padding-top: 0;
+  }
+  .record-list-item .title:hover{
+    color:#337ab7;
+  }
+
+ .act-list-item:hover{
+   background:rgba(0,0,0,.2);
+ }
+ .myactive_content{
+   margin-top: 15px;
+ }
+ .myact-img{
+   padding: 0px;
+   margin-top:15px;
+ }
+ /* 发布记录图标 */
+ .content-right button img{
+   width:15px;
+   height:15px;
+ }
+ .myactive-title{
+   font-weight: bold;
+ }
+ 

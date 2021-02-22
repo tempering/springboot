@@ -1,0 +1,158 @@
+<!-- 
+    bootstrap+layui
+ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>记录</title>
+
+    <!-- Bootstrap -->
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/first.css">
+        <link rel="stylesheet" href="../css/vertical-bar.css">
+        <link rel="stylesheet" href="../layui/layui/css/layui.css"  media="all">
+        <style>
+          .record-head{
+            margin-top: 70px;
+          }
+          #demo{
+            margin-top: 50px;
+            
+
+          }
+        
+          .body{
+            margin:70px auto;
+          }
+          .content textarea{
+            width:500px;
+          }
+         .record-head{
+           margin-top: 30px;
+           margin-bottom: 20px;
+         }
+         .record-button{
+           margin:30px auto;
+
+         }
+         .record-titile{
+           margin-top: 70px;
+         }
+        </style>
+  </head>
+ 
+  <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" alt="">
+                我们毕业了
+            </a>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+           
+            <li class="active"><a href="../active/active.html">活动</a></li>
+            <li><a href="../service/service.html">服务</a></li> 
+             
+              <li><a href="../message/message_board.html">留言板</a></li> 
+              <li><a href="#">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right head-name"> 
+                <li><a href="cart.html">购物车 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> </a></li>
+                <li><img src="../img/head.jpg" alt="" title="双击头像即可退出账号"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rain@ <span class="caret"></span>  
+                    <ul class="dropdown-menu">
+                      <li><a href="../head_info_down/my_active.html">我的活动</a></li>
+                      <li><a href="../head_info_down/publish_active.html">发布活动</a></li>
+                      <li><a href="../head_info_down/publish_commodity.html">发布商品</a></li>
+                      <li><a href="../head_info_down/my_notice.html">我的通知</a></li>
+                      <li><a href="../head_info_down/my_order.html">我的订单</a></li>
+                      <li><a href="../head_info_down/my_inform.html">个人信息</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="../../static/index.html">退出登录</a></li>
+                    </ul>
+                  </li> 
+              </ul>
+          </div>
+        </div>
+      </nav>    
+      <!-- 主体内容 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+
+        <div class="col-md-8">
+        <div class="record-titile">
+          <ol class="breadcrumb">
+            <li><a href="../active/active.html">活动</a></li>
+            <li><a href="../active/active.html">活动日记</a></li>
+            <li class="active">发布日记</li>
+          </ol>
+        </div>
+          <!-- 标题 -->     
+          <!-- required：注册浏览器所规定的必填字段
+              lay-verify：注册form模块需要验证的类型
+              class="layui-input"：layui.css提供的通用CSS -->
+        <div class="record-head">
+          <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">     
+        </div> 
+        <!-- 记录内容 -->
+        <div class="content">
+          <!-- 引入layui语法 -->
+          <textarea id="demo" style="display: none;"></textarea>
+        </div> 
+        <div class="record-button">
+        <button id="addBtu" type="button" class="layui-btn">发表</button>          
+        </div>
+
+        </div>
+
+
+    
+      </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>  
+    <script src="../layui/layui/layui.all.js" charset="utf-8"></script>
+    <script>
+      layui.use('layedit', function(){
+        var layedit = layui.layedit;
+        layedit.build('demo'); //建立编辑器
+      });
+           
+      layedit.set({
+        uploadImage: {
+        url:'' //接口url
+       ,type: '' //默认post
+       }
+      });
+        //注意：layedit.set 一定要放在 build 前面，否则配置全局接口将无效。
+       
+         layedit.build('id', {
+         height:300 //设置编辑器高度
+      });
+
+      layedit.build('id', {
+       tool: ['left', 'center', 'right', '|', 'face']
+      });    
+      
+
+      </script>
+           
+    </body>
+    </html>

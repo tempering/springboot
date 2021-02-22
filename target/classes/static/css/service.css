@@ -1,0 +1,14 @@
+.service-item{
+    margin:35px;
+}
+.service-item img{
+  height:200px;
+  width:200px;
+  }
+  .service-item h3{
+    font-size: 15px;
+    text-align: center;
+  }
+  .service-item p{
+    text-align: center;
+  }

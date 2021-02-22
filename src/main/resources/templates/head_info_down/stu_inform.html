@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>个人信息</title>
+
+    <!-- Bootstrap -->
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/first.css">
+        <link rel="stylesheet" href="../css/vertical-bar.css">
+  <style>
+        .head-name img{
+            height: 40px;
+            border-radius: 25px;
+            margin-left: 20px;
+            /* vertical-align: middle;  */
+            margin-top:5px;
+        }
+        button{
+        width:600px;
+        margin-top:10px;
+      }
+      .model-inform{
+          margin:20px 80px;
+      }
+      .form-control{
+        width:600px;
+      }
+      .inform-content{
+        margin-left: 18px;
+      }
+  </style>
+  </head>
+ 
+  <body>
+     <!--导航-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" alt="">
+                我们毕业了
+            </a>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+           
+            
+                <li><a href="../active/active.html">活动</a></li>
+                <li><a href="../service/service.html">服务</a></li> 
+                 
+                  <li><a href="../message/message_board.html">留言板</a></li> 
+                  <li><a href="#">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right head-name"> 
+                <li><a href="cart.html">购物车 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> </a></li>
+                <li><img src="../img/head.jpg" alt="" title="双击头像即可退出账号"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Rain@ <span class="caret"></span>  
+                      <ul class="dropdown-menu">
+                        <li><a href="my_active.html">我的活动</a></li>
+                        <li><a href="publish_active.html">发布活动</a></li>
+                        <li><a href="publish_plan.html">发布策划</a></li>
+                        <li><a href="publish_commodity.html">发布商品</a></li>
+                        <li><a href="my_record.html">我的日记</a></li>
+                        <li><a href="my_order.html">我的订单</a></li>
+                        <li><a href="stu_inform.html">学生信息</a></li>
+                        <li><a href="bus_inform.html">学生信息</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../../static/index.html">退出登录</a></li>
+                      </ul>
+                  </li> 
+              </ul>
+          </div>
+        </div>
+      </nav>
+     <!--  导航下方内容-->
+    <div class="container">
+    <div class="row"> 
+      <!-- 竖导航 -->
+      <div class="col-md-2 left-content">
+      <nav class="navbar navbar-default">
+        <div class="vertical-bar">
+          <ul class="nav nav-pills nav-stacked">
+              <li role="presentation" ><a href="my_active.html">我的活动</a></li>
+              <li role="presentation"><a href="publish_active.html">发布活动</a></li>
+              <li role="presentation"><a href="publish_plan.html">发布策划</a></li>
+              <li role="presentation"><a href="publish_commodity.html">发布商品</a></li>
+              <li role="presentation"><a href="my_record.html">我的日记</a></li>
+              <li role="presentation"><a href="my_order.html">我的订单</a></li>
+              <li role="presentation" class="active"><a href="stu_inform.html">学生信息</a></li>
+              <li role="presentation"><a href="bus_inform.html">商家信息</a></li>
+            </ul>
+          </div>
+      </nav>
+      </div>
+      <!-- 学生信息修改 -->
+      <div class="col-md-10 right-content">
+        <div class="row row-center model-inform">
+          <div class="col-md-6 col-lg-12 col-xs-6">
+              <div class="inform_heading">
+                  <h3 class="text-center">修改信息</h3>
+                  <p class="text-center">学生</p>
+              </div>
+      <form class="form-horizontal inform-content">
+          <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">姓名</label>
+              <div class="col-sm-10">
+                <input type="name" class="form-control" id="inputName" placeholder="姓名">
+              </div>
+          </div>
+        
+          <div class="form-group">
+              <label for="inputSex" class="col-sm-2 control-label">性别</label>
+              <div class="col-sm-10">  
+            <select class="form-control sex">
+              <option>男</option>
+              <option>女</option>
+            </select>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputBirth" class="col-sm-2 control-label">生日</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputBirth" placeholder="生日">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputTel" class="col-sm-2 control-label">电话</label>
+              <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputTel" placeholder="电话">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSchool" class="col-sm-2 control-label">学校</label>
+              <div class="col-sm-10">
+                <input type="school" class="form-control" id="inputSchool" placeholder="学校">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputCollege" class="col-sm-2 control-label">学院</label>
+              <div class="col-sm-10">
+                <input type="college" class="form-control" id="inputCollege" placeholder="学院">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputMajor" class="col-sm-2 control-label">专业</label>
+              <div class="col-sm-10">
+                <input type="major" class="form-control" id="inputMajor" placeholder="专业">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputClass0" class="col-sm-2 control-label">班级</label>
+              <div class="col-sm-10">
+                <input type="class0" class="form-control" id="inputClass0" placeholder="班级">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="Stu_Email" placeholder="邮箱">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10 " >
+                <button type="submit" class="btn btn-success" id="sub_btn">提交</button>
+              </div>
+            </div>
+
+        </form>
+          </div>
+      </div>
+      </div>
+    </div> 
+</div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>  
+    </body>
+    </html>

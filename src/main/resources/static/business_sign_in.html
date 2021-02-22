@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>商家注册界面</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/log_sign.css">
+  </head>
+  <body>
+      <div class="container ">
+          <div class="row ">
+            <div class="col-lg-6 col-xs-6">
+            </div>
+             <div class="col-lg-6 col-xs-6 log-sign-bar">
+            <p class="pull-right"> 
+                <span class="hidden-xs yes-id">已经有账号了？</span>
+                <span class="log_in_bus"><a href="business_log_in.html">登录</a></span>
+            </p>
+            </div>
+          </div>
+            <div class="row row-center model2">
+                <div class="col-md-6 col-lg-12">
+                    <div class="log_in_heading">
+                        <h3 class="text-center">用户注册</h3>
+                        <p class="text-center">商家</p>
+                        <span class="errorMsg" style="color:red;"></span>
+                    </div>
+            <form>
+                <div class="form-group">
+                  <label for="Bus_Tel">手机号码</label>
+                  <input type="text" class="form-control" id="Bus_Tel" placeholder="手机号码">
+                </div>
+                <div class="form-group">
+                  <label for="Bus_Name">用户名</label>
+                  <input type="text" class="form-control" id="Bus_Name" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <label for="Bus_Password">输入密码</label>
+                    <input type="password" class="form-control" id="Bus_Password" placeholder="输入密码">
+                  </div>
+                  <div class="form-group">
+                    <label for="Bus_RePassword">确认密码</label>
+                    <input type="password" class="form-control" id="Bus_RePassword" placeholder="确认密码">
+                  </div>
+                <button type="submit" class="btn btn-success" id="bus_btn">注册</button>
+              </form>
+              <div class="exchange_student text-right">
+                  <a href="stu_sign_in.html">切换成学生账号注册</a>
+              </div>
+                </div>
+            </div>
+        </div>
+
+  
+   
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+                    //调用登录接口
+        $("[type='submit']").click(function(){
+          //验证手机号 第一位是1，第二位是3-9，3位以后任意数字，且一共11位数
+              var userTel=$("#Bus_Tel").val();
+
+              var Telpatt=/^1[3-9][0-9]{9}$/;
+
+              if(!Telpatt.test(userTel)){
+                 //4 提示用户结果
+                   $("span.errorMsg").text("手机号码不合法！");
+                   return false;
+               }
+               $("span.errorMsg").text("");
+               //验证用户名：必须由字母、数字和下划线组成，并且长度为5到12位
+               //1 获取用户名输入框里的内容
+                var usernameText = $("#Bus_Name").val();
+               //2 创建正则表达式对象
+               var usernamePatt =/^\w{5,12}$/;
+               //3 使用test验证
+               if(!usernamePatt.test(usernameText)){
+                 //4 提示用户结果
+                   $("span.errorMsg").text("用户名不合法！必须由字母、数字或下划线组成，并且长度为5到12位");
+                   return false;
+               }
+
+              var passwordText = $("#Bus_Password").val();
+
+              if(null == passwordText || ""== passwordText){
+                        alert("请输入登录密码");
+                        return ;
+                      }
+
+              var repwdText=$("#Bus_RePassword").val();
+
+              if(null ==  repwdText || ""== repwdText){
+                        alert("请输入确认密码");
+                        return ;
+                      }
+              //2和密码相比较
+              if(repwdText != passwordText)
+              //3提示用户
+              $("span.errorMsg").text("确认密码和输入密码不一致！");
+                  return false;
+              //合法
+              $("span.errorMsg").text("");
+              
+            $.ajax({
+                url:'http://localhost:8080/business_log_in.html',
+                data:{ "Bus_Tel": userTel, "Bus_Name":usernameText,"Bus_Password":passwordText},
+                type:'post',
+                dataType:'json',
+                success : function(result) {          //请求成功的回调函数
+                //传得到这一步 ，具体就是后端相关了
+                    //   alert("hahah");
+                    //将json字符串转换为js对象
+                  let data = JSON.parse(result);
+                  if (data.code === 0){
+                    alert("成功");
+                    window.location.href = "success";//"success"是跳转的页面？
+                }//     window.location.href = "index";
+            },
+                error : function(e) {           //请求失败的回调函数
+                     console.log(e);
+            }
+            });
+
+          })
+        </script>
+  </body>
+</html>

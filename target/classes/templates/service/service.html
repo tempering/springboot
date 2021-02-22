@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>服务页面</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/first.css">
+    <style>
+      #forum {
+          padding: 80px 0;
+          text-align: center;
+      }
+      
+      #forum .col-md-6 {
+          padding: 15px;
+          height:500px;
+      }
+      
+      #forum .col-md-6:hover {
+          padding: 15px;
+          background: #f1f1f1;
+          box-shadow: 1px 1px 3px #ccc;
+          border-radius: 10px;
+      }
+      #forum a {
+     color: #333;
+ }
+      .img-rounded{
+        width:340px;
+        height:340px;
+        transition: all 0.6s;
+      }
+      .img-rounded:hover{
+        transform: scale(1.1);
+      }
+ 
+      #forum h3 {
+     font-weight: 700;
+ }
+  
+    </style>
+  </head>
+ 
+  <body>
+      <!--navbar-fixed-top固定在顶部-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="" alt="">
+                我们毕业了
+            </a>
+          </div>
+      
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+          
+            <li ><a href="../active/active.html">活动</a></li> 
+            <li class="active"><a href="../service/service.html">服务</a></li> 
+              <li><a href="../message/message_board.html">留言板</a></li> 
+              <li><a href="../about/about.html">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right head-name"> 
+                <li><a href="cart.html">购物车 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> </a></li>
+                <li><img src="../img/head.jpg" alt="" title="双击头像即可退出账号"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rain@ <span class="caret"></span>  
+                      <ul class="dropdown-menu">
+                        <li><a href="../head_info_down/my_active.html">我的活动</a></li>
+                        <li><a href="../head_info_down/publish_active.html">发布活动</a></li>
+                        <li><a href="../head_info_down/publish_plan.html">发布策划</a></li>
+                        <li><a href="../head_info_down/publish_commodity.html">发布商品</a></li>
+                        <li><a href="../head_info_down/my_record.html">我的日记</a></li>
+                        <li><a href="../head_info_down/my_order.html">我的订单</a></li>
+                        <li><a href="../head_info_down/stu_inform.html">学生信息</a></li>
+                        <li><a href="../head_info_down/bus_inform.html">学生信息</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../../static/index.html">退出登录</a></li>
+                      </ul>
+                  </li> 
+              </ul>
+          </div>
+        </div>
+      </nav>
+     <!-- forum -->
+     <section id="forum">
+      <div class="container">
+          <div class="row   fadeInUp" data-wow-duration=".5s">
+              <div class="col-md-6 col-xs-12">
+                  <a href="s-photo.html">
+                      <img src="../img/service.jpg" alt="forum1.png" class="img-rounded">
+                      <h3>摄影</h3>
+                      <p>Android开发技术交流、问题求助、实战案例分享</p>
+                  </a>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                  <a href="s-clothe.html">
+                      <img src="../img/service.jpg" alt="forum2.png" class="img-rounded">
+                      <h3>服装</h3>
+                      <p>iOS开发技术交流，海量iOS实战干活分享</p>
+                  </a>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                  <a href="s-souvenir.html">
+                      <img src="../img/service.jpg" alt="forum3.png" class="img-rounded">
+                      <h3>纪念品</h3>
+                      <p>底层嵌入开发、实战案例等技术交流讨论</p>
+                  </a>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <a href="s-other.html">
+                    <img src="../img/service.jpg" alt="forum3.png" class="img-rounded">
+                    <h3>其他</h3>
+                    <p>底层嵌入开发、实战案例等技术交流讨论</p>
+                </a>
+            </div>
+          </div>
+      </div>
+  </section>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+     
+    </script>
+  </body>
+</html>

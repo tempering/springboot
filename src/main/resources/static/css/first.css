@@ -1,0 +1,44 @@
+.damu-three{
+    margin-top:50px;
+}
+/* .media{
+
+    margin:50px auto;
+} */
+/* 水平线 */
+/* .damu-hr{
+    margin:40px auto;
+} */
+/* .thumbnail img{
+    width:120px;
+    height:153px;
+} */
+.homepage_jumbotron{
+    height:400px;
+}
+@media screen and (min-width:1280px){
+    .container{
+        width:1280px;
+    }
+}
+/* active页面中导航栏下面的布局
+.nav_down{
+    margin-top:70px;
+} */
+/*我的活动下拉图标*/
+/* .myactive_title img{
+    width:15px;
+    height:15px;
+}  */
+
+/*活动下拉菜单居中*/
+.dropdown-menu a{
+    text-align: center;
+}
+.head-name img{
+    height: 40px;
+    border-radius: 25px;
+    margin-left: 20px;
+    /* vertical-align: middle;  */
+    margin-top:5px;
+}
